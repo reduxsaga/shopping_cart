@@ -1,0 +1,25 @@
+name: shopping_cart
+description: Shopping Cart Example by Redux Saga
+version: 1.0.0+1
+maintainer: Bilal Uslu (@bilaluslu)
+homepage: https://github.com/reduxsaga/shopping_cart
+repository: https://github.com/reduxsaga/shopping_cart
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  redux: ^4.0.0
+  flutter_redux: ^0.6.0
+  redux_saga: ^1.0.4
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  test: ^1.14.4
+
+flutter:
+  uses-material-design: true
