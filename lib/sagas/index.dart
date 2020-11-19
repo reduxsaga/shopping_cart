@@ -14,7 +14,7 @@ rootSaga() sync* {
   });
 }
 
-getAllProducts() sync* {
+getAllProducts({action}) sync* {
   var products = Result<Products>();
   yield Call(getProductsAPI, result: products);
   yield Put(ReceiveProducts(products.value));
@@ -53,7 +53,7 @@ checkout() sync* {
     yield Select(selector: getCart, result: cart);
     yield Call(buyProductsAPI, args: [cart.value]);
     yield Put(CheckoutSuccess(cart.value));
-  }, Catch: (error) sync* {
-    yield Put(CheckoutFailure(error));
+  }, Catch: (e, s) sync* {
+    yield Put(CheckoutFailure(e));
   });
 }
