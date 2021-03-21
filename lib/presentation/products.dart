@@ -6,7 +6,7 @@ class ProductsControl extends StatelessWidget {
   final Products products;
   final Function(int) onAddToCart;
 
-  ProductsControl({@required this.products, @required this.onAddToCart});
+  ProductsControl({required this.products, required this.onAddToCart});
 
   @override
   Widget build(BuildContext context) {

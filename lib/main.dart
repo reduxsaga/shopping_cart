@@ -6,15 +6,16 @@ import 'package:redux/redux.dart';
 import 'package:shopping_cart/pages/cart.dart';
 import 'package:shopping_cart/pages/home.dart';
 import 'config/configureStore.dart';
+import 'models/appState.dart';
 
 void main() {
   runApp(MyApp(store: configureStore()));
 }
 
 class MyApp extends StatelessWidget {
-  final Store store;
+  final Store<AppState> store;
 
-  MyApp({Key key, this.store}) : super(key: key);
+  MyApp({required this.store}) : super();
 
   @override
   Widget build(BuildContext context) {

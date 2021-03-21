@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 class ProductControl extends StatelessWidget {
   ProductControl({
-    @required this.price,
-    @required this.inventory,
-    @required this.title,
-    @required this.onAddToCart,
-    @required this.image,
+    required this.price,
+    required this.inventory,
+    required this.title,
+    required this.onAddToCart,
+    required this.image,
   });
 
   final double price;
   final int inventory;
   final String title;
-  final Function onAddToCart;
+  final VoidCallback onAddToCart;
   final int image;
 
   @override
@@ -38,7 +38,7 @@ class ProductControl extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  FlatButton(
+                  TextButton(
                     child: Column(
                       children: [
                         Icon(Icons.add_shopping_cart),

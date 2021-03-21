@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 class CartFooterControl extends StatelessWidget {
   CartFooterControl({
-    @required this.total,
-    @required this.itemCount,
-    @required this.onCheckout,
-    @required this.checkoutPending,
-    @required this.failed,
-    @required this.error,
+    required this.total,
+    required this.itemCount,
+    required this.onCheckout,
+    required this.checkoutPending,
+    required this.failed,
+    required this.error,
   });
 
   final double total;
   final int itemCount;
-  final Function onCheckout;
+  final VoidCallback onCheckout;
   final bool checkoutPending;
   final bool failed;
   final dynamic error;
@@ -68,7 +68,7 @@ class CartFooterControl extends StatelessWidget {
                   Text('Total : \$$total'),
                 ],
               ),
-              FlatButton(
+              TextButton(
                 child: Column(
                   children: [
                     Row(

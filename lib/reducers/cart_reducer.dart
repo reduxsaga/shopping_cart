@@ -16,7 +16,7 @@ Cart _addToCartReducer(Cart state, AddToCart action) {
 }
 
 Cart _removeFromCartReducer(Cart state, RemoveFromCart action) {
-  int quantity = state.quantityById[action.productId] - 1;
+  int quantity = state.quantityById[action.productId]! - 1;
   var newState = state.copyWith(quantityById: {...state.quantityById});
   if (quantity > 0)
     newState.quantityById[action.productId] = quantity;

@@ -17,7 +17,7 @@ rootSaga() sync* {
 getAllProducts({action}) sync* {
   var products = Result<Products>();
   yield Call(getProductsAPI, result: products);
-  yield Put(ReceiveProducts(products.value));
+  yield Put(ReceiveProducts(products.value!));
 }
 
 watchGetProducts() sync* {
@@ -52,7 +52,7 @@ checkout() sync* {
     var cart = Result<Cart>();
     yield Select(selector: getCart, result: cart);
     yield Call(buyProductsAPI, args: [cart.value]);
-    yield Put(CheckoutSuccess(cart.value));
+    yield Put(CheckoutSuccess(cart.value!));
   }, Catch: (e, s) sync* {
     yield Put(CheckoutFailure(e));
   });

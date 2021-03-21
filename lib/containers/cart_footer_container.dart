@@ -28,18 +28,18 @@ class CartFooterContainer extends StatelessWidget {
 class _ViewModel {
   final double total;
   final int itemCount;
-  final Function onCheckout;
+  final VoidCallback onCheckout;
   final bool checkoutPending;
   final bool failed;
   final dynamic error;
 
   _ViewModel(
-      {@required this.total,
-      @required this.itemCount,
-      @required this.checkoutPending,
-      @required this.failed,
+      {required this.total,
+      required this.itemCount,
+      required this.checkoutPending,
+      required this.failed,
       @required this.error,
-      @required this.onCheckout});
+      required this.onCheckout});
 
   static _ViewModel fromStore(Store<AppState> store) {
     return _ViewModel(

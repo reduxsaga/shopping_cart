@@ -21,7 +21,7 @@ class CartButtonContainer extends StatelessWidget {
 class _ViewModel {
   final int itemCount;
 
-  _ViewModel({@required this.itemCount});
+  _ViewModel({required this.itemCount});
 
   static _ViewModel fromStore(Store<AppState> store) {
     return _ViewModel(itemCount: store.state.cart.quantityById.values.fold(0, (v, e) => v + e));

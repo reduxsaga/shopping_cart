@@ -6,13 +6,13 @@ class CartStatus {
   final bool failed;
   final dynamic error;
 
-  const CartStatus({@required this.checkoutPending, @required this.failed, @required this.error});
+  const CartStatus({required this.checkoutPending, required this.failed, required this.error});
 
   factory CartStatus.initial() {
     return CartStatus(checkoutPending: false, failed: false, error: null);
   }
 
-  CartStatus copyWith({bool checkoutPending, bool failed, dynamic error}) {
+  CartStatus copyWith({bool? checkoutPending, bool? failed, dynamic error}) {
     return CartStatus(
       checkoutPending: checkoutPending ?? this.checkoutPending,
       failed: failed ?? this.failed,
