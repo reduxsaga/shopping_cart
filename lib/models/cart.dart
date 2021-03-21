@@ -4,13 +4,13 @@ import 'package:meta/meta.dart';
 class Cart {
   final Map<int, int> quantityById;
 
-  const Cart({@required this.quantityById});
+  const Cart({required this.quantityById});
 
   factory Cart.initial() {
     return Cart(quantityById: {});
   }
 
-  Cart copyWith({Map<int, int> quantityById}) {
+  Cart copyWith({Map<int, int>? quantityById}) {
     return Cart(
       quantityById: quantityById ?? this.quantityById,
     );

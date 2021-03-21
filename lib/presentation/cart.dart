@@ -8,9 +8,9 @@ class CartControl extends StatelessWidget {
   final bool checkoutPending;
 
   CartControl(
-      {@required this.cartProductsByQuantity,
-      @required this.onRemoveFromCart,
-      @required this.checkoutPending});
+      {required this.cartProductsByQuantity,
+      required this.onRemoveFromCart,
+      required this.checkoutPending});
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +21,8 @@ class CartControl extends StatelessWidget {
             itemCount: cartProducts.length,
             itemBuilder: (BuildContext context, int index) {
               return CartItemControl(
-                price: cartProductsByQuantity[cartProducts[index]] * cartProducts[index].price,
-                quantity: cartProductsByQuantity[cartProducts[index]],
+                price: cartProductsByQuantity[cartProducts[index]]! * cartProducts[index].price,
+                quantity: cartProductsByQuantity[cartProducts[index]]!,
                 title: cartProducts[index].title,
                 image: cartProducts[index].image,
                 onRemoveFromCart:

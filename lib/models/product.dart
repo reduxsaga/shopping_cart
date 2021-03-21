@@ -11,13 +11,13 @@ class Product {
   final int inventory;
 
   const Product(
-      {@required this.id,
-      @required this.title,
-      @required this.image,
-      @required this.price,
-      @required this.inventory});
+      {required this.id,
+      required this.title,
+      required this.image,
+      required this.price,
+      required this.inventory});
 
-  Product copyWith({int id, String title, int image, double price, int inventory}) {
+  Product copyWith({int? id, String? title, int? image, double? price, int? inventory}) {
     return Product(
       id: id ?? this.id,
       title: title ?? this.title,

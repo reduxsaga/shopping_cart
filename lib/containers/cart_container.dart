@@ -28,9 +28,9 @@ class _ViewModel {
   final bool checkoutPending;
 
   _ViewModel(
-      {@required this.cartProductsByQuantity,
-      @required this.onRemoveFromCart,
-      @required this.checkoutPending});
+      {required this.cartProductsByQuantity,
+      required this.onRemoveFromCart,
+      required this.checkoutPending});
 
   static _ViewModel fromStore(Store<AppState> store) {
     return _ViewModel(

@@ -10,9 +10,9 @@ class AppState {
   final CartStatus cartStatus;
 
   const AppState({
-    @required this.products,
-    @required this.cart,
-    @required this.cartStatus,
+    required this.products,
+    required this.cart,
+    required this.cartStatus,
   });
 
   factory AppState.initial() {
@@ -24,9 +24,9 @@ class AppState {
   }
 
   AppState copyWith({
-    Products products,
-    Cart cart,
-    CartStatus cartStatus,
+    Products? products,
+    Cart? cart,
+    CartStatus? cartStatus,
   }) {
     return AppState(
       products: products ?? this.products,

@@ -6,13 +6,13 @@ import 'package:shopping_cart/models/product.dart';
 class Products {
   final List<Product> items;
 
-  const Products({@required this.items});
+  const Products({required this.items});
 
   factory Products.initial() {
     return Products(items: []);
   }
 
-  Products copyWith({List<Product> items}) {
+  Products copyWith({List<Product>? items}) {
     return Products(
       items: items ?? this.items,
     );

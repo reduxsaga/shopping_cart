@@ -25,7 +25,7 @@ class _ViewModel {
   final Products products;
   final Function(int) onAddToCart;
 
-  _ViewModel({@required this.products, @required this.onAddToCart});
+  _ViewModel({required this.products, required this.onAddToCart});
 
   static _ViewModel fromStore(Store<AppState> store) {
     return _ViewModel(

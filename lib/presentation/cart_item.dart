@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 class CartItemControl extends StatelessWidget {
   CartItemControl({
-    @required this.price,
-    @required this.quantity,
-    @required this.title,
-    @required this.onRemoveFromCart,
-    @required this.image,
+    required this.price,
+    required this.quantity,
+    required this.title,
+    required this.onRemoveFromCart,
+    required this.image,
   });
 
   final double price;
   final int quantity;
   final String title;
-  final Function onRemoveFromCart;
+  final VoidCallback? onRemoveFromCart;
   final int image;
 
   @override
@@ -36,7 +36,7 @@ class CartItemControl extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  FlatButton(
+                  TextButton(
                     child: Column(
                       children: [
                         Icon(Icons.remove_shopping_cart),
